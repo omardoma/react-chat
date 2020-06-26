@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: react-chat-backend
+    ports:
+      - '3000:3000'
+    volumes:
+      - ../.env:/app/.env
+    environment:
+      NODE_ENV: production

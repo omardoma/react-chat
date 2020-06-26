@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatInput renders ChatInput component 1`] = `
+<DocumentFragment>
+  <form
+    class="MuiPaper-root makeStyles-root-1 MuiPaper-outlined"
+  >
+    <div
+      class="MuiInputBase-root MuiInput-root makeStyles-input-2 Mui-focused Mui-focused MuiInputBase-multiline MuiInput-multiline"
+    >
+      <textarea
+        aria-label="Message Input"
+        autocomplete="off"
+        class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+        name="message"
+        placeholder="Enter Message"
+        rows="1"
+        style="height: 0px; overflow: hidden;"
+      />
+      <textarea
+        aria-hidden="true"
+        class="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline"
+        readonly=""
+        style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); width: 100%;"
+        tabindex="-1"
+      />
+    </div>
+    <button
+      aria-label="Send"
+      class="MuiButtonBase-root MuiIconButton-root makeStyles-sendButton-3"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiIconButton-label"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"
+          />
+        </svg>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
+  </form>
+</DocumentFragment>
+`;

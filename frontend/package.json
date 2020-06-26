@@ -1,0 +1,121 @@
+{
+  "name": "react-chat-frontend",
+  "version": "1.0.0",
+  "description": "A simple chat SPA built with React.",
+  "scripts": {
+    "lint": "eslint --fix src/**/*.{ts,tsx}",
+    "format": "prettier --config .prettierrc --write",
+    "analyze": "source-map-explorer 'dist/*.js'",
+    "build": "webpack -d --mode development",
+    "build:prod": "NODE_ENV=production webpack -p --mode production",
+    "watch": "webpack-dev-server --hot --mode development",
+    "start": "NODE_ENV=production pushstate-server -d ./dist -p 8080",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch"
+  },
+  "author": "Omar Doma",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "npm run lint"
+    ],
+    "src/**/*.{ts,tsx,json,scss}": [
+      "npm run format"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup-tests.ts"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "test"
+    ]
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@use-it/event-listener": "^0.1.3",
+    "date-fns": "^2.14.0",
+    "immer": "^7.0.3",
+    "nanoid": "^3.1.10",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-intl": "^4.6.10",
+    "react-router-dom": "^5.2.0",
+    "react-spring": "^8.0.27",
+    "use-immer": "^0.4.0",
+    "use-socketio": "^2.0.3"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.10.1",
+    "@testing-library/react": "^10.2.1",
+    "@testing-library/user-event": "^12.0.11",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^12.12.47",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@typescript-eslint/eslint-plugin": "^3.3.0",
+    "@typescript-eslint/parser": "^3.3.0",
+    "autoprefixer": "^9.8.4",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-typescript": "^8.0.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jest-dom": "^3.0.1",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "eslint-plugin-testing-library": "^3.3.1",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.10",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.5",
+    "pushstate-server": "^3.1.0",
+    "sass-loader": "^8.0.2",
+    "source-map-explorer": "^2.4.2",
+    "ts-jest": "^26.1.1",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

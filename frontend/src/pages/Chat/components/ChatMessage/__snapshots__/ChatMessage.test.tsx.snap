@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatMessage renders a received ChatMessage component when isSent is false with 12 Hours clock format 1`] = `
+<DocumentFragment>
+  <p
+    class="makeStyles-timestamp-9 makeStyles-timestamp-11"
+  >
+    <span>
+      guest1, 
+    </span>
+    12:00 AM
+  </p>
+  <div
+    class="makeStyles-bubble-10 makeStyles-bubble-12 received"
+  >
+    <p>
+      Hey There
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ChatMessage renders a received ChatMessage component when isSent is false with 24 Hours clock format 1`] = `
+<DocumentFragment>
+  <p
+    class="makeStyles-timestamp-13 makeStyles-timestamp-15"
+  >
+    <span>
+      guest1, 
+    </span>
+    00:00
+  </p>
+  <div
+    class="makeStyles-bubble-14 makeStyles-bubble-16 received"
+  >
+    <p>
+      Hey There
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ChatMessage renders a sent ChatMessage component when isSent is true with 12 Hours clock format 1`] = `
+<DocumentFragment>
+  <p
+    class="makeStyles-timestamp-1 makeStyles-timestamp-3"
+  >
+    12:00 AM
+  </p>
+  <div
+    class="makeStyles-bubble-2 makeStyles-bubble-4 sent"
+  >
+    <p>
+      Hey There
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ChatMessage renders a sent ChatMessage component when isSent is true with 24 Hours clock format 1`] = `
+<DocumentFragment>
+  <p
+    class="makeStyles-timestamp-5 makeStyles-timestamp-7"
+  >
+    00:00
+  </p>
+  <div
+    class="makeStyles-bubble-6 makeStyles-bubble-8 sent"
+  >
+    <p>
+      Hey There
+    </p>
+  </div>
+</DocumentFragment>
+`;
